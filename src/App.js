@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Contact from './Contact';
 import "./App.css";
+import Home from "./Home";
 
 function App() {
     const path = window.location.pathname;
@@ -10,10 +11,11 @@ function App() {
     <div>
         <Navbar />
         {path === '/contact' && <Contact />}
-        <h1>Welcome to my Pulsed blog website!</h1>
-        <Footer />
+        {path === '/home' && <Home />}
+        {path === '/' && <Home/>}
+        {/*<Footer />*/}
     </div>
     );
-}
+};
 
 export default App;
